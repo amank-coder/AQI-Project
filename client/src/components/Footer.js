@@ -13,9 +13,9 @@ const Footer = () => {
   return (
     <div className='w-100% h-800px mb-0'>
        
-        <div className="h-300px pb-10 flex items-center justify-center bg-slate-100 ">
+        <div className="h-300px pb-10 flex items-center justify-center bg-slate-200 ">
             <div className="flex-col items-center justify-center">
-                  <div className="mb-3 ml-8 text-2xl font-bold">Connect with AQI</div>
+                  <div className="mb-3 ml-8 text-2xl font-bold mt-4">Connect with AQI</div>
                   <div className="mb-3 ml-8 font-medium">Sign up for our newsletter</div>
                   <div className='mb-8 flex gap-3'>
                       <input type="text" placeholder="Email Address" />
@@ -67,11 +67,9 @@ const Footer = () => {
                   <span>Terms of Sale</span>
                   <span>Privacy Policy</span>
                 </div>
-        </div>
+          </div>
       
-        </div>
-        
-        
+        </div>       
     </div>
   )
 }

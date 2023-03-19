@@ -9,7 +9,7 @@ export const Header = () => {
           <img src={logo} alt='' className='h-10'/>
         </div>
         <div className='rounded-md'>
-          <input type='text' placeholder='Search' className='p-1 rounded-md'/>
+          <input type='text' placeholder='Search' className='p-2 text-black rounded-md'/>
         </div>
         <div className='flex'>
           <ul className='flex gap-5'>
