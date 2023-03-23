@@ -32,28 +32,28 @@ const Footer = () => {
               </div>
                 <div className="flex-col leading-7">
                     <div className='font-bold pb-2'>Inside AQI</div>
-                    <div>About Us</div>
-                    <div>Contact</div>
+                    <div className='hover:cursor-pointer hover:text-red-600'>About Us</div>
+                    <div className='hover:cursor-pointer hover:text-red-600'>Contact</div>
                 </div>
                 <div className="flex-col leading-7">
                     <div className="font-bold pb-2">Media</div>
-                    <div>Newsroom</div>
-                    <div>Press releases</div>
-                    <div>Media Contact</div>
+                    <div className='hover:cursor-pointer hover:text-red-600'>Newsroom</div>
+                    <div className='hover:cursor-pointer hover:text-red-600'>Press releases</div>
+                    <div className='hover:cursor-pointer hover:text-red-600'>Media Contact</div>
                 </div>
               </div>
                 
               <div className="flex justify-center gap-5 mb-8 mr-10">
-                    <div className="icon">
+                    <div className="icon hover:cursor-pointer hover:text-red-600">
                         <FaFacebookF size={24} />
                     </div>
-                    <div className="icon">
+                    <div className="icon hover:cursor-pointer hover:text-red-600">
                         <FaTwitter size={24} />
                     </div>
-                    <div className="icon">
+                    <div className="icon hover:cursor-pointer hover:text-red-600">
                         <FaInstagram size={24} />
                     </div>
-                    <div className="icon">
+                    <div className="icon hover:cursor-pointer hover:text-red-600">
                         <FaLinkedinIn size={24} />
                     </div>
               </div>
@@ -63,9 +63,9 @@ const Footer = () => {
                   <img src={india} />     
                 </div>
                 <div className='flex gap-8 pr-20'>
-                  <span>Terms of Use</span>
-                  <span>Terms of Sale</span>
-                  <span>Privacy Policy</span>
+                  <span className='hover:cursor-pointer hover:font-semibold'>Terms of Use</span>
+                  <span className='hover:cursor-pointer hover:font-semibold'>Terms of Sale</span>
+                  <span className='hover:cursor-pointer hover:font-semibold'>Privacy Policy</span>
                 </div>
           </div>
       

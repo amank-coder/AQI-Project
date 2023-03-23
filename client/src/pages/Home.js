@@ -1,9 +1,23 @@
 import React from 'react'
 import {RiSurgicalMaskLine} from 'react-icons/ri'
 import {IoMdBicycle} from 'react-icons/io'
+import BarChart from '../components/charts/BarChart'
+import LineChart from '../components/charts/LineChart'
+import { useState } from 'react'
+import {UserData} from '../data/data'
 
+const Home = ({chartData}) => {
+  
+  const [userData, setUserData] = useState({
+    labels:UserData.map((data)=>data.year),
+    datasets:[{
+      label:"AQI",
+      data:UserData.map((data)=>data.aqi)
+    }]
+  })
 
-const Home = () => {
+  const [aqi, setAqi] = useState(129)
+
   return (
     <div className='w-100% bg-slate-100'>
       <div className='p-10'>
@@ -84,8 +98,8 @@ const Home = () => {
 
              <div className='bg-white p-6'>
               <h2>Comparative exposure with Vellore</h2>
-              <div className='bg-slate-400 h-56'>
-
+              <div>
+                   <LineChart chartData={userData}/> 
               </div>
              </div>
 
@@ -97,7 +111,7 @@ const Home = () => {
                 <div className='bg-orange-300 h-32 rounded-md'>
                     <div className='p-5 flex'>
                       <div className='p-4 bg-orange-500 mr-5 text-white'>
-                          <p>AQI</p><p className='text-3xl'>129</p>
+                          <p>AQI</p><p className='text-3xl'>{aqi}</p>
                       </div>
                       <div className='text-orange-800 font-bold text-3xl'>Unhealthy For Sensitive Groups</div>
                     </div>        
@@ -160,8 +174,8 @@ const Home = () => {
               <div className='bg-white w-full p-6 rounded-md drop-shadow-xl'>
                   <h2>Historical</h2>
                   <p>Historic air quality graph: Vellore, Tamil Nadu</p>   
-                  <div className='bg-slate-400 h-80'>
-
+                  <div className='w-full'>
+                    <BarChart chartData={userData}/>
                   </div>         
               </div>
           
