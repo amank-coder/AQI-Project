@@ -4,7 +4,11 @@ import {IoMdBicycle} from 'react-icons/io'
 import BarChart from '../components/charts/BarChart'
 import LineChart from '../components/charts/LineChart'
 import { useState } from 'react'
-import {UserData} from '../data/data'
+import {UserData, City} from '../data/data'
+import mask from '../data/mask.jpg'
+import purifier from '../data/purifier.jpg'
+import monitor from '../data/monitor.jpg'
+
 
 const Home = ({chartData}) => {
   
@@ -19,7 +23,7 @@ const Home = ({chartData}) => {
   const [aqi, setAqi] = useState(129)
 
   return (
-    <div className='w-100% bg-slate-100'>
+    <div className='w-100% bg-slate-100 mt-10'>
       <div className='p-10'>
           <h1 className='font-bold text-4xl mb-2'>Air quality near Vellore, Tamil Nadu</h1>
           <p className='mb-8 text-1.5xl'>Air quality index (AQI) and PM2.5 air pollution near Vellore, Tamil Nadu</p>
@@ -62,7 +66,7 @@ const Home = ({chartData}) => {
                     <div className='flex justify-between font-bold'>
                      <div>#</div><div>city</div><div>AQI</div>
                     </div>
-                  <div className='flex justify-between'>
+                  {/* <div className='flex justify-between'>
                     <div>1</div><div>Patna</div><div className='bg-red-800 px-1 rounded-md'>346</div>
                   </div>
                   <div className='flex justify-between'>
@@ -91,7 +95,14 @@ const Home = ({chartData}) => {
                   </div>
                   <div className='flex justify-between'>
                     <div>10</div><div>Indore</div><div className='bg-red-400 px-1 rounded-md'>178</div>
-                  </div>
+                  </div> */}
+                  {City?.map((item)=>{
+                    return(
+                      <div className='flex justify-between'>
+                        <div>{item.id}</div><div>{item.city}</div><div className={`${item.color} px-1 rounded-md`}>{item.aqi}</div>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
              </div> 
@@ -171,18 +182,32 @@ const Home = ({chartData}) => {
                 </div>   
               </div>
 
-              <div className='bg-white w-full p-6 rounded-md drop-shadow-xl'>
+              <div className='bg-white w-full p-6 rounded-md drop-shadow-xl mb-6'>
                   <h2>Historical</h2>
                   <p>Historic air quality graph: Vellore, Tamil Nadu</p>   
                   <div className='w-full'>
                     <BarChart chartData={userData}/>
                   </div>         
               </div>
-          
-          </div>        
+              <div className='bg-white w-full p-6 rounded-md drop-shadow-xl'>
+                <h2 className='font-bold text-2xl'>How to best protect from air pollution?</h2>
+                <p className='mb-5'>Reduce your air pollution exposure in Vellore, Tamil Nadu</p>
+                <div className='flex justify-around'>
+                  <div className='p-4 bg-slate-200 rounded-md'>
+                    <img src={mask} alt='mask' className='hover:cursor-pointer' width={108}/>
+                  </div>
+                  <div className='p-4 bg-slate-200 rounded-md'>
+                    <img src={purifier} alt="purifier" className='hover:cursor-pointer' width={108}/>
+                  </div>
+                  <div className='p-4 bg-slate-200 rounded-md'> 
+                    <img src={monitor} alt='monitor' className='hover:cursor-pointer' width={108}/>
+                  </div>
+                </div>
+              </div>
+
         </div>
-          
       </div>
+     </div>
     </div>
   )
 }
