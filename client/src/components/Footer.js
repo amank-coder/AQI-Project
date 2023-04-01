@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className='w-100% h-800px mb-0'>
        
-        <div className="h-300px pb-10 flex items-center justify-center bg-slate-200 ">
+        <div className="h-300px pb-10 flex items-center justify-center bg-slate-200">
             <div className="flex-col items-center justify-center">
                   <div className="mb-3 ml-8 text-2xl font-bold mt-4">Connect with AQI</div>
                   <div className="mb-3 ml-8 font-medium">Sign up for our newsletter</div>
@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
               </div>
                 
-              <div className="flex justify-center gap-5 mb-8 mr-10">
+              <div className="flex flex-col md:flex-row justify-center gap-5 mb-8 mr-10">
                     <div className="icon hover:cursor-pointer hover:text-red-600">
                         <FaFacebookF size={24} />
                     </div>

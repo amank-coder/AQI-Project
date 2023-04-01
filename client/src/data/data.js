@@ -88,3 +88,25 @@ export const UserData = [
       color:'bg-red-400'
     },
   ];
+ 
+  // export const Concentration = [
+  //   {
+  //     id: 1,
+  //     s:'w-40'
+  //   },
+  //   {
+  //     id: 2,
+  //     s:'w-40'
+  //   },
+  // ];
+
+  export const Concentration = [
+      {
+        id: 1,
+        s:'w-40'
+      },
+      {
+        id: 2,
+        s:'w-40'
+      },
+    ];

@@ -23,14 +23,14 @@ const Home = ({chartData}) => {
   const [aqi, setAqi] = useState(129)
 
   return (
-    <div className='w-100% bg-slate-100 mt-10'>
+    <div className='sm:w-full w-full bg-slate-100 mt-10'>
       <div className='p-10'>
           <h1 className='font-bold text-4xl mb-2'>Air quality near Vellore, Tamil Nadu</h1>
           <p className='mb-8 text-1.5xl'>Air quality index (AQI) and PM2.5 air pollution near Vellore, Tamil Nadu</p>
           
-          <div className='flex gap-6 w-full'>
+          <div className='flex flex-col md:flex-row gap-6 w-full'>
           
-            <div className='flex flex-col'>
+            <div className='flex flex-col order-2'>
               
               <div className='p-5 w-80 h-80 rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-md mb-6'>    
                 <div className='mt-30'>
@@ -116,15 +116,15 @@ const Home = ({chartData}) => {
 
             </div>
 
-          <div className='flex flex-col'>
+          <div className='flex flex-col order-1'>
               
               <div className='w-full rounded-md bg-white drop-shadow-xl mb-6'>
                 <div className='bg-orange-300 h-32 rounded-md'>
                     <div className='p-5 flex'>
                       <div className='p-4 bg-orange-500 mr-5 text-white'>
-                          <p>AQI</p><p className='text-3xl'>{aqi}</p>
+                          <p>AQI</p><p className='sm:text-3xl'>{aqi}</p>
                       </div>
-                      <div className='text-orange-800 font-bold text-3xl'>Unhealthy For Sensitive Groups</div>
+                      <div className='text-orange-800 font-bold text-2xl sm:text-3xl'>Unhealthy For Sensitive Groups</div>
                     </div>        
                 </div>
                 <div className='p-4'>
@@ -143,18 +143,18 @@ const Home = ({chartData}) => {
                 </table>
                 </div>
                 <div className='p-4'>
-                  <span className='mr-36 text-slate-500'>Pollutants</span>
+                  <span className='mr-24 sm:mr-36 text-slate-500'>Pollutants</span>
                   <span className='text-slate-500'>Concentration</span>
                   <div className='flex'>
                       <p>PM2.5</p>
-                      <div className='w-60 bg-orange-300 h-2 mt-2 ml-36 rounded-md'>
-                          <div className='w-40 bg-orange-700 h-2 rounded-md'></div>
+                      <div className='w-32 sm:w-60 bg-orange-300 h-2 mt-2 ml-24 sm:ml-36 rounded-md'>
+                          <div className='w-20 sm:w-40 bg-orange-700 h-2 rounded-md'></div>
                       </div>
                   </div>
                   <div className='flex'>
                       <p className='mr-2'>O3</p>
-                      <div className='w-60 bg-green-300 h-2 mt-2 ml-40 rounded-md'>
-                          <div className='w-40 bg-green-700 h-2 rounded-md'></div>
+                      <div className='w-32 sm:w-60 bg-green-300 h-2 mt-2 ml-28 sm:ml-40 rounded-md'>
+                          <div className={'w-20 sm:w-40 bg-green-700 h-2 rounded-md'}></div>
                       </div>
                   </div>
                 </div> 
