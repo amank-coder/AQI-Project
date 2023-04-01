@@ -2,9 +2,14 @@ import './App.css';
 import Header from './components/Header/Header'
 import Footer from './components/Footer';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import FaceMask from './pages/FaceMask';
 import AirPurifier from './pages/AirPurifier';
+import AirQuality from './pages/AirQuality';
+import FaceMask from './pages/FaceMask';
 import Home from './pages/Home';
+import Business from './pages/Business';
+import Community from './pages/Community';
+import News from './pages/News';
+import Support from './pages/Support';
 
 function App() {
   return (
@@ -12,9 +17,14 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='/air-purifier' element={<AirPurifier />}/>
-          <Route path='/face-mask' element={<FaceMask />}/>
-          
+          <Route path='/airquality' element={<AirQuality />}/>
+          <Route path='/community' element={<Community />}/>
+          <Route path='/airpurifier' element={<AirPurifier />}/>
+          <Route path='/business' element={<Business />}/>
+          <Route path='/facemask' element={<FaceMask />}/>
+          <Route path='/community' element={<Community />}/>
+          <Route path='/news' element={<News />}/>
+          <Route path='/support' element={<Support />}/>
         </Routes>
         <Footer />
     </Router>       

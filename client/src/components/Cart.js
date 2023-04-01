@@ -8,8 +8,8 @@ const Cart = ({setShowCart}) => {
       <div className="h-full w-full bg-black opacity-50 absolute" onClick={() => setShowCart(false)}></div>
        <div className='h-full w-1/2 sm:w-1/3 bg-white z-1 absolute sm:left-1/3 translate-x-full flex flex-col z-50 sm:p-5'>
         <div className="flex justify-end pt-5 items-center border-gray-700">
-                    <span className="flex items-center gap-1 absolute top-5 right-3" onClick={() => setShowCart(false)}>
-                        <MdClose className="hover:cursor-pointer" />
+                    <span className="flex items-center gap-1 absolute top-5 right-3 hover:cursor-pointer" onClick={() => setShowCart(false)}>
+                        <MdClose />
                         <span className="hidden md:block text">close</span>
                     </span>
                     <span className="text-2xl top:24px mt-12 md:mr-24 font-bold uppercase text-black">Shopping Cart</span>

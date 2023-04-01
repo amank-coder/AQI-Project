@@ -23,7 +23,7 @@ const Home = ({chartData}) => {
   const [aqi, setAqi] = useState(129)
 
   return (
-    <div className='sm:w-full w-full bg-slate-100 mt-10'>
+    <div className='sm:w-full w-96 bg-slate-100 mt-10'>
       <div className='p-10'>
           <h1 className='font-bold text-4xl mb-2'>Air quality near Vellore, Tamil Nadu</h1>
           <p className='mb-8 text-1.5xl'>Air quality index (AQI) and PM2.5 air pollution near Vellore, Tamil Nadu</p>
@@ -32,7 +32,7 @@ const Home = ({chartData}) => {
           
             <div className='flex flex-col order-2'>
               
-              <div className='p-5 w-80 h-80 rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-md mb-6'>    
+              <div className='p-5 w-68 sm:w-80 h-80 rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 drop-shadow-md mb-6'>    
                 <div className='mt-30'>
                   <h2>Air Quality Map</h2>
                   <span>Vellore</span><br></br>
@@ -40,7 +40,7 @@ const Home = ({chartData}) => {
                 </div>     
               </div>
 
-              <div className='bg-white mb-6 w-80 rounded-md'>
+              <div className='bg-white mb-6 w-68 sm:w-80 rounded-md'>
                 <div className='bg-blue-200 p-2 rounded-md'>
                   <h3 className='font-semibold text-blue-400'>Weather</h3>
                   <p>What is the current weather near Vellore, Tamil Nadu?</p>
@@ -58,7 +58,7 @@ const Home = ({chartData}) => {
                 </div>             
               </div>
 
-              <div className='bg-white w-80 p-6 mb-6'>
+              <div className='bg-white w-68 sm:w-80 p-6 mb-6'>
                 <div>
                   <h2 className='text-blue-300'>LIVE AQI CITY RANKING</h2>
                   <p>Real-time India city ranking</p>

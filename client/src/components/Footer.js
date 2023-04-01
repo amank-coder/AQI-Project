@@ -11,7 +11,7 @@ import logo from './../data/logo.PNG'
 
 const Footer = () => {
   return (
-    <div className='w-100% h-800px mb-0'>
+    <div className='w-96 sm:w-full h-800px mb-0'>
        
         <div className="h-300px pb-10 flex items-center justify-center bg-slate-200">
             <div className="flex-col items-center justify-center">
@@ -26,7 +26,7 @@ const Footer = () => {
         
         <div className='w-100% bg-slate-300 pt-10'>
           <div className="flex justify-between pb-5">
-              <div className='flex px-50 py-30 gap-20 ml-20'>
+              <div className='flex px-50 py-30 gap-20 ml-10 sm:ml-20'>
               <div className='text-4xl underline'>
                 <img src={logo} alt='' className='h-10'/>
               </div>
